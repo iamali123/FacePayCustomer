@@ -6,6 +6,7 @@ import {
   View,
   Dimensions,
 } from "react-native";
+import { color } from '../components/Styles'
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
@@ -29,7 +30,7 @@ const Card = (props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F5F7FF",
+   backgroundColor: color.zircon,
   },
   topWaveLayer: {
     width: windowWidth,

@@ -1,14 +1,8 @@
 import * as React from "react";
-import { StyleSheet, View, Image, Dimensions, ScrollView } from "react-native";
+import { StyleSheet, View, Image, Dimensions, TouchableOpacity, Text } from "react-native";
 import Card from "../../components/Card";
 import * as Animatable from "react-native-animatable";
-import {
-  WelcomeContainer,
-  H1,
-  Text,
-  GeneralButton,
-  BtnText,
-} from "../../components/Styles";
+import baseStyle from '../../components/Styles'
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
@@ -22,7 +16,7 @@ class Landing extends React.Component {
   render() {
     return (
       <Card>
-        <WelcomeContainer>
+        <View style={baseStyle.welcomeContainer}>
           <Animatable.View animation="slideInDown">
             <Image
               source={require("../../assets/images/emoji.png")}
@@ -37,22 +31,22 @@ class Landing extends React.Component {
           </Animatable.View>
           <View style={styles.content}>
             <Animatable.View animation="slideInLeft">
-              <H1>Customer</H1>
+              <Text style={baseStyle.h1}>Customer</Text>
             </Animatable.View>
-            <Text style={styles.welcomeDesc}>
+            <Text style={[baseStyle.text, styles.welcomeDesc]}>
               The best part of ordering stuff online, the packages. It's like
               recieving a present every time on order shows up at your door.
             </Text>
             <Animatable.View animation="slideInLeft">
-              <GeneralButton
-                style={styles.btnStyle}
+              <TouchableOpacity
+              style={baseStyle.blueButton}
                 onPress={() => this.props.navigation.navigate("Login")}
               >
-                <BtnText>Getting Started</BtnText>
-              </GeneralButton>
+                <Text style={baseStyle.blueBtnText}>Getting Started</Text>
+              </TouchableOpacity>
             </Animatable.View>
           </View>
-        </WelcomeContainer>
+        </View>
       </Card>
     );
   }
@@ -72,7 +66,7 @@ const styles = StyleSheet.create({
     width: windowWidth,
     height: windowHeight / 3,
     marginBottom: "5%",
-    marginLeft: "5%",
+    marginLeft: "8%",
   },
   content: {
     alignItems: "center",
@@ -81,9 +75,6 @@ const styles = StyleSheet.create({
   },
   welcomeDesc: {
     marginBottom: 25,
-  },
-  btnStyle: {
-    maxWidth: "300px",
-    width: "100%",
+    textAlign: "center"
   },
 });
