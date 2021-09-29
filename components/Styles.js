@@ -87,6 +87,34 @@ export default {
     paddingTop: 10,
     paddingBottom: 10,
   },
+  dropdown: {
+    width: "100%",
+    fontSize: normalize(28),
+    color: "#3F466F",
+    backgroundColor: "#FFFFFF",
+  },
+  dropdownWrapper: {
+    height: 50,
+    flexDirection: "row",
+    position: "relative",
+    borderColor: "#D8E0F3",
+    borderWidth: 2,
+    borderRadius: 50,
+    backgroundColor: "#FFFFFF",
+    paddingLeft: 20,
+    paddingRight: 8,
+    paddingTop: 10,
+    paddingBottom: 10,
+    marginBottom: 12,
+  },
+  bottomDrop: {
+    position: "absolute",
+    right: 17,
+    width: 13,
+    height: 13,
+    top: 17,
+    resizeMode: "contain",
+  },
   topBar: {
     flexDirection: "row",
     position: "relative",
@@ -123,4 +151,15 @@ export default {
     marginTop: "5%",
     marginBottom: "15%",
   },
+  row:{
+    flexDirection: "row",
+    justifyContent: "space-between"
+  },
+  shadow: {
+    shadowColor: "#ADB6D9",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.38,
+    shadowRadius: 5,
+    elevation: 5,
+  }
 };

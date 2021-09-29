@@ -87,14 +87,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  faceIcon: {
-    width: 22,
-    height: 22,
-    resizeMode: "contain",
-  },
   faceButton: {
     position: "absolute",
     right: "8%",
     alignSelf: "center",
+  },
+  faceIcon: {
+    width: 20,
+    height: 20,
+    resizeMode: "contain",
   },
 });

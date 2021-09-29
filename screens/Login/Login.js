@@ -43,7 +43,7 @@ export default class Login extends Component {
             >
               <TouchableOpacity
                 style={baseStyle.blueButton}
-                onPress={() => this.login()}
+                onPress={() => this.props.navigation.navigate("Index")}
               >
                 <Text style={baseStyle.blueBtnText}>Log In</Text>
               </TouchableOpacity>

@@ -7,6 +7,12 @@ import { useFonts } from "expo-font";
 import Landing from "../screens/Landing/Landing";
 import Login from "../screens/Login/Login"
 import ChangePassword from "../screens/PasswordRecovery/ChangePassword";
+import SignUp from "../screens/SignUp/SignUp";
+import EmailVerification from "../screens/EmailVerification/EmailVerification";
+import AddProfile from "../screens/UserProfile/AddProfile";
+import PrivacyPolicy from "../screens/PrivacyPolicy/PrivacyPolicy";
+import TermsOfUse from "../screens/TermsOfUse/TermsOfUse";
+import Index from "../screens/Home/Index/Index";
 
 const Stack = createNativeStackNavigator();
 
@@ -41,13 +47,61 @@ export const MainStack = () => {
         name="Login"
         component={Login}
       />
-              <Stack.Screen
+      <Stack.Screen
         options={{
           headerShown: false,
           headerTransparent: true,
         }}
         name="ChangePassword"
         component={ChangePassword}
+      />
+      <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="SignUp"
+        component={SignUp}
+      />
+      <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="EmailVerification"
+        component={EmailVerification}
+      />
+      <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="AddProfile"
+        component={AddProfile}
+      />
+      <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="PrivacyPolicy"
+        component={PrivacyPolicy}
+      />
+      <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="TermsOfUse"
+        component={TermsOfUse}
+      />
+      <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="Index"
+        component={Index}
       />
     </Stack.Navigator>
   );
