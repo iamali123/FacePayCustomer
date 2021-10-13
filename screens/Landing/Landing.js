@@ -1,6 +1,6 @@
 import * as React from "react";
 import { StyleSheet, View, Image, Dimensions, TouchableOpacity, Text } from "react-native";
-import Card from "../../components/Card";
+
 import * as Animatable from "react-native-animatable";
 import baseStyle from '../../components/Styles'
 
@@ -15,7 +15,7 @@ class Landing extends React.Component {
 
   render() {
     return (
-      <Card>
+      <>
         <View style={baseStyle.welcomeContainer}>
           <Animatable.View animation="slideInDown">
             <Image
@@ -47,7 +47,7 @@ class Landing extends React.Component {
             </Animatable.View>
           </View>
         </View>
-      </Card>
+      </>
     );
   }
 }

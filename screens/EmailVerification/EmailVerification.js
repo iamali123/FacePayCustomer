@@ -8,7 +8,7 @@ import {
   ScrollView,
   TextInput,
 } from "react-native";
-import Card from "../../components/Card";
+
 import baseStyle from "../../components/Styles";
 
 class EmailVerification extends React.Component {
@@ -28,7 +28,7 @@ class EmailVerification extends React.Component {
   render() {
     const { pin1, pin2, pin3, pin4, pin5 } = this.state;
     return (
-      <Card>
+      <>
         <View style={baseStyle.topBar}>
           <TouchableOpacity
             style={baseStyle.backbtn}
@@ -145,7 +145,7 @@ class EmailVerification extends React.Component {
             </View>
           </View>
         </ScrollView>
-      </Card>
+      </>
     );
   }
 }

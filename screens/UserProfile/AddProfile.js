@@ -7,14 +7,14 @@ import {
   Text,
   ScrollView,
 } from "react-native";
-import Card from "../../components/Card";
+
 import baseStyle from "../../components/Styles";
 import ProfileForm from "./ProfileForm";
 
 export default class AddProfile extends Component {
   render() {
     return (
-      <Card>
+      <>
         <View style={baseStyle.topBar}>
           <TouchableOpacity
             style={baseStyle.backbtn}
@@ -35,7 +35,7 @@ export default class AddProfile extends Component {
             <ProfileForm />
           </View>
         </ScrollView>
-      </Card>
+      </>
     );
   }
 }

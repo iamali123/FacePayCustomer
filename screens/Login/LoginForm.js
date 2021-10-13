@@ -80,7 +80,7 @@ export default class LoginForm extends Component {
           >
             <Image
               style={styles.faceIcon}
-              source={require("../../assets/images/face-icon.png")}
+              source={require("../../assets/images/faceIcon.png")}
             ></Image>
           </TouchableOpacity>
           {this._renderEyeButton()}

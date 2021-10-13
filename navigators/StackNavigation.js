@@ -3,7 +3,7 @@ import {
   createNativeStackNavigator,
 } from "@react-navigation/native-stack";
 import { useFonts } from "expo-font";
-
+import { DefaultTheme } from "@react-navigation/native";
 import Landing from "../screens/Landing/Landing";
 import Login from "../screens/Login/Login"
 import ChangePassword from "../screens/PasswordRecovery/ChangePassword";
@@ -28,6 +28,8 @@ export const MainStack = () => {
     return null;
   }
 
+  const navTheme = DefaultTheme;
+  navTheme.colors.background = "#F1F2F8";
 
   return (
     <Stack.Navigator initialRouteName="Landing" backBehavior="initialRoute">

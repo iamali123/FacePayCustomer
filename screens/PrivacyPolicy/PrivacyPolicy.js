@@ -7,13 +7,13 @@ import {
     Image,
     ScrollView,
   } from "react-native";
-  import Card from "../../components/Card";
+  
 import baseStyle, { color } from "../../components/Styles";
 
 export default class PrivacyPolicy extends Component {
     render() {
         return (
-            <Card>
+            <>
             <View style={baseStyle.topBar}>
               <TouchableOpacity
                 style={baseStyle.backbtn}
@@ -72,7 +72,7 @@ export default class PrivacyPolicy extends Component {
                 </TouchableOpacity>
             </View>
           </ScrollView>
-        </Card>
+        </>
         )
     }
 }

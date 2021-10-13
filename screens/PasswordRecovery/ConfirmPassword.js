@@ -7,13 +7,13 @@ import {
   Text,
   TextInput,
 } from "react-native";
-import Card from "../../components/Card";
+
 import baseStyle, { color } from "../../components/Styles";
 
 export default class ConfirmPassword extends Component {
   render() {
     return (
-      <Card>
+      <>
         <View style={baseStyle.topBar}>
           <TouchableOpacity
             style={baseStyle.backbtn}
@@ -77,7 +77,7 @@ export default class ConfirmPassword extends Component {
             <Text style={baseStyle.blueBtnText}>Submit</Text>
           </TouchableOpacity>
         </View>
-      </Card>
+      </>
     );
   }
 }

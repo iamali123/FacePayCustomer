@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View, Image, TouchableOpacity, StyleSheet, Dimensions, ScrollView, Text } from "react-native";
-import Card from "../../components/Card";
+
 import baseStyle, { color } from "../../components/Styles";
 import LoginForm from './LoginForm'
 
@@ -10,7 +10,7 @@ const windowHeight = Dimensions.get("window").height;
 export default class Login extends Component {
     render() {
         return (
-          <Card>
+          <>
             <View style={baseStyle.topBar}>
             <TouchableOpacity
               style={baseStyle.backbtn}
@@ -34,36 +34,40 @@ export default class Login extends Component {
                   this.props.navigation.navigate("ChangePassword")
                 }
               >
-                <Text style={baseStyle.text}>
-                  Forgot Password?
-                </Text>
               </TouchableOpacity>
-            <View
-              style={{ alignItems: "flex-end", width: "100%", marginTop: 15 }}
-            >
               <TouchableOpacity
-                style={baseStyle.blueButton}
+                style={[baseStyle.blueButton, {width: "100%", marginTop: 10}]}
                 onPress={() => this.props.navigation.navigate("Index")}
               >
                 <Text style={baseStyle.blueBtnText}>Log In</Text>
               </TouchableOpacity>
-            </View>
 
             <View style={styles.bottomContent}>
+                 <View style={{ flexDirection: "row", marginBottom: 10 }}>
                 <Text style={baseStyle.text}>
-                 Not a Member?
+                Don’t you have an account? 
                 </Text>
                 <TouchableOpacity
                   onPress={() => this.props.navigation.navigate("SignUp")}
                 >
-                  <Text style={[baseStyle.text, styles.innerStyle]}>
+                  <Text style={baseStyle.text}>
                     Sign Up
                   </Text>
                 </TouchableOpacity>
               </View>
+              <TouchableOpacity
+                onPress={() =>
+                  this.props.navigation.navigate("PasswordRecovery")
+                }
+              >
+                <Text style={baseStyle.text}>
+                  Forgot Password?
+                </Text>
+              </TouchableOpacity>
+              </View>
           </View>
         </ScrollView>
-          </Card>
+          </>
         )
     }
 }
@@ -81,8 +85,7 @@ const styles = StyleSheet.create({
   },
   bottomContent: {
     marginTop: "15%",
-    flexDirection: "row",
-    justifyContent: "center"
+    alignItems: "center"
   },
   innerStyle:{
     marginLeft: 7,

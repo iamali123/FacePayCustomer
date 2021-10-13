@@ -7,13 +7,12 @@ import {
     Text,
     ScrollView,
   } from "react-native";
-  import Card from "../../../components/Card";
   import baseStyle, { color } from "../../../components/Styles";
 
 export default class Index extends Component {
     render() {
         return (
-            <Card>
+            <>
             <View style={baseStyle.topBar}>
               <Text style={baseStyle.h2}>Home</Text>
               <TouchableOpacity style={baseStyle.nextbtn}>
@@ -77,7 +76,7 @@ export default class Index extends Component {
         </TouchableOpacity>
         </View> */}
          </ScrollView>
-         </Card>
+         </>
         )
     }
 }

@@ -22,6 +22,7 @@ export const color = {
   pelorous: "#49B7C4",
   zircon: "#F5F7FF",
   linkwater: "#D8E0F3",
+  black: "#292929"
 };
 
 export default {
@@ -56,7 +57,7 @@ export default {
   },
 
   blueButton: {
-    backgroundColor: color.pelorous,
+    backgroundColor: color.black,
     paddingLeft: 30,
     paddingRight: 30,
     paddingTop: 12,
@@ -121,12 +122,14 @@ export default {
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
-    marginTop: 50,
+    paddingTop: "10%",
+    paddingBottom: 10,
+    backgroundColor: "#fff",
   },
   backbtn: {
     position: "absolute",
     left: 20,
-    top: 0,
+    bottom: 10,
   },
   backArrow: {
     width: 20,
@@ -135,7 +138,7 @@ export default {
   nextbtn: {
     position: "absolute",
     right: 20,
-    top: 0,
+    bottom: 10,
   },
   welcomeContainer: {
     flex: 1,

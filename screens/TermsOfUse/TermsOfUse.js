@@ -7,13 +7,13 @@ import {
     Image,
     ScrollView,
   } from "react-native";
-  import Card from "../../components/Card";
+  
 import baseStyle, { color } from "../../components/Styles";
 
 export default class TermsOfUse extends Component {
     render() {
         return (
-            <Card>
+            <>
             <ScrollView>
     
                 <View style={baseStyle.topBar}>
@@ -75,7 +75,7 @@ export default class TermsOfUse extends Component {
                 </TouchableOpacity>
               </View>
             </ScrollView>
-          </Card>
+          </>
         )
     }
 }

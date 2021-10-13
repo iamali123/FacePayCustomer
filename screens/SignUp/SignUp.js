@@ -9,7 +9,7 @@ import {
   Text,
   CheckBox,
 } from "react-native";
-import Card from "../../components/Card";
+
 import baseStyle from "../../components/Styles";
 import SignUpForm from "./SignUpForm";
 
@@ -47,7 +47,7 @@ export default class SignUp extends Component {
 
   render() {
     return (
-      <Card>
+      <>
         <View style={baseStyle.topBar}>
           <TouchableOpacity
             style={baseStyle.backbtn}
@@ -103,7 +103,7 @@ export default class SignUp extends Component {
             {this._renderSinUpButton()}
           </View>
         </ScrollView>
-      </Card>
+      </>
     );
   }
 }
