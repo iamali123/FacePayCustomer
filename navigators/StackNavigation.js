@@ -16,6 +16,16 @@ import Index from "../screens/Home/Index/Index";
 import ConfirmPassword from '../screens/PasswordRecovery/ConfirmPassword'
 import ViewAllPromotions from "../screens/Home/PromotionAndOffers/ViewAllPromotions";
 import SinglePromotion from "../screens/Home/PromotionAndOffers/SinglePromotion";
+import PersonalInformation from "../screens/Profile/PersonalInformation";
+import Support from "../screens/Support/Support"
+import Referrals from "../screens/Referrals/Referrals"
+import GoTouchless from "../screens/GoTouchless/GoTouchless"
+import Transactions from "../screens/Transactions/Transactions"
+import CreditCards from "../screens/CreditCards/CreditCards"
+import Stores from "../screens/Stores/Stores"
+import Users from "../screens/Users/Users"
+import NearMe from "../screens/NearMe/NearMe"
+
 
 const Stack = createNativeStackNavigator();
 
@@ -125,13 +135,85 @@ export const MainStack = () => {
         name="ViewAllPromotions"
         component={ViewAllPromotions}
       />
-              <Stack.Screen
+        <Stack.Screen
         options={{
           headerShown: false,
           headerTransparent: true,
         }}
         name="SinglePromotion"
         component={SinglePromotion}
+      />
+       <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="GoTouchless"
+        component={GoTouchless}
+      />
+        <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="PersonalInformation"
+        component={PersonalInformation}
+      />
+            <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="Transactions"
+        component={Transactions}
+      />
+                  <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="CreditCards"
+        component={CreditCards}
+      />
+                   <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="Stores"
+        component={Stores}
+      />
+                  <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="Users"
+        component={Users}
+      />
+                 <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="NearMe"
+        component={NearMe}
+      />
+                    <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="Referrals"
+        component={Referrals}
+      />
+        <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="Support"
+        component={Support}
       />
     </Stack.Navigator>
   );

@@ -11,17 +11,21 @@ import {
   import baseStyle, { color } from "../../../components/Styles";
 
 export default class Index extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
     render() {
         return (
             <>
             <View style={baseStyle.topBar}>
               <Text style={baseStyle.h2}>Home</Text>
-              <TouchableOpacity style={baseStyle.nextbtn}>
+              {/* <TouchableOpacity style={baseStyle.nextbtn}>
               <Image
               style={baseStyle.backArrow}
               source={require("../../../assets/images/search-icon.png")}
             />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
             </View>
             <ScrollView>
         <View style={[styles.innerContainer, baseStyle.row, {alignItems: "center"}]}>
@@ -35,7 +39,7 @@ export default class Index extends Component {
         <ScrollView horizontal showsHorizontalScrollIndicator={false}> 
           <TouchableOpacity 
           style={styles.promotionBlock}
-           onPress={() => this.props.navigation.navigate("SinglePromotions")}
+           onPress={() => this.props.navigation.navigate("SinglePromotion")}
           >
                <ImageBackground
                 source={require("../../../assets/images/promotion-thumb.png")}
@@ -64,10 +68,10 @@ export default class Index extends Component {
           </TouchableOpacity> 
           <TouchableOpacity 
           style={styles.promotionBlock}
-           onPress={() => this.props.navigation.navigate("SinglePromotions")}
+           onPress={() => this.props.navigation.navigate("SinglePromotion")}
           >
                <ImageBackground
-                source={require("../../../assets/images/promotion-thumb.png")}
+                source={require("../../../assets/images/white-castle.png")}
                 style={styles.image}
                 imageStyle={{
                   borderRadius: 6,
@@ -93,7 +97,7 @@ export default class Index extends Component {
           </TouchableOpacity> 
           <TouchableOpacity 
           style={styles.promotionBlock}
-           onPress={() => this.props.navigation.navigate("SinglePromotions")}
+           onPress={() => this.props.navigation.navigate("SinglePromotion")}
           >
                <ImageBackground
                 source={require("../../../assets/images/promotion-thumb.png")}
@@ -122,63 +126,99 @@ export default class Index extends Component {
           </TouchableOpacity> 
         </ScrollView>
          <View style={{width: "100%", flexDirection: "row", flexWrap: "wrap", marginTop: "8%", paddingHorizontal: 12}}>
-           <TouchableOpacity style={[baseStyle.shadow, styles.pageBox]}>
+           <TouchableOpacity 
+                  onPress={() => {
+                    this.props.navigation.navigate("GoTouchless");
+                  }}
+           style={[baseStyle.shadow, styles.pageBox]}>
            <Image
               style={styles.pageIcon}
               source={require("../../../assets/images/touchless-icon.png")}
             />
         <Text style={[baseStyle.h3, {textAlign: "center"}]}>Go Touchless</Text> 
         </TouchableOpacity>
-        <TouchableOpacity style={[baseStyle.shadow, styles.pageBox]}>
+        <TouchableOpacity
+        onPress={() => {
+          this.props.navigation.navigate("PersonalInformation");
+        }}
+        style={[baseStyle.shadow, styles.pageBox]}>
            <Image
               style={styles.pageIcon}
               source={require("../../../assets/images/profile-icon.png")}
             />
-  <Text style={[baseStyle.h3, {textAlign: "center"}]}>Profile</Text> 
+          <Text style={[baseStyle.h3, {textAlign: "center"}]}>Profile</Text> 
         </TouchableOpacity>
-        <TouchableOpacity style={[baseStyle.shadow, styles.pageBox]}>
+        <TouchableOpacity 
+                    onPress={() => {
+                      this.props.navigation.navigate("Transactions");
+                    }}
+        style={[baseStyle.shadow, styles.pageBox]}>
            <Image
               style={styles.pageIcon}
               source={require("../../../assets/images/transactions-icon.png")}
             />
                 <Text style={[baseStyle.h3, {textAlign: "center"}]}>Transactions</Text> 
         </TouchableOpacity>
-        <TouchableOpacity style={[baseStyle.shadow, styles.pageBox]}>
+        <TouchableOpacity 
+                    onPress={() => {
+                      this.props.navigation.navigate("CreditCards");
+                    }}
+        style={[baseStyle.shadow, styles.pageBox]}>
            <Image
               style={styles.pageIcon}
               source={require("../../../assets/images/credit-cards-icon.png")}
             />
                 <Text style={[baseStyle.h3, {textAlign: "center"}]}>Credit Cards</Text> 
         </TouchableOpacity>
-        <TouchableOpacity style={[baseStyle.shadow, styles.pageBox]}>
+        <TouchableOpacity
+                    onPress={() => {
+                      this.props.navigation.navigate("Stores");
+                    }}
+        style={[baseStyle.shadow, styles.pageBox]}>
            <Image
               style={styles.pageIcon}
               source={require("../../../assets/images/stores-icon.png")}
             />
                 <Text style={[baseStyle.h3, {textAlign: "center"}]}>Stores</Text> 
         </TouchableOpacity>
-        <TouchableOpacity style={[baseStyle.shadow, styles.pageBox]}>
+        <TouchableOpacity
+                onPress={() => {
+                  this.props.navigation.navigate("Users");
+                }}
+        style={[baseStyle.shadow, styles.pageBox]}>
            <Image
               style={styles.pageIcon}
               source={require("../../../assets/images/users-icon.png")}
             />
                 <Text style={[baseStyle.h3, {textAlign: "center"}]}>Users</Text> 
         </TouchableOpacity>
-        <TouchableOpacity style={[baseStyle.shadow, styles.pageBox]}>
+        <TouchableOpacity 
+                onPress={() => {
+                  this.props.navigation.navigate("NearMe");
+                }}
+        style={[baseStyle.shadow, styles.pageBox]}>
            <Image
               style={styles.pageIcon}
               source={require("../../../assets/images/near-me-icon.png")}
             />
                 <Text style={[baseStyle.h3, {textAlign: "center"}]}>Near Me</Text> 
         </TouchableOpacity>
-        <TouchableOpacity style={[baseStyle.shadow, styles.pageBox]}>
+        <TouchableOpacity
+                onPress={() => {
+                  this.props.navigation.navigate("Referrals");
+                }}
+        style={[baseStyle.shadow, styles.pageBox]}>
            <Image
               style={styles.pageIcon}
               source={require("../../../assets/images/referrals-icon.png")}
             />
                 <Text style={[baseStyle.h3, {textAlign: "center"}]}>Referrals</Text> 
         </TouchableOpacity>
-        <TouchableOpacity style={[baseStyle.shadow, styles.pageBox]}>
+        <TouchableOpacity
+                onPress={() => {
+                  this.props.navigation.navigate("Support");
+                }}
+        style={[baseStyle.shadow, styles.pageBox]}>
            <Image
               style={styles.pageIcon}
               source={require("../../../assets/images/support-icon.png")}

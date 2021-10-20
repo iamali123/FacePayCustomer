@@ -15,19 +15,22 @@ export default class ViewAllPromotions extends Component {
         return (
             <>
             <View style={baseStyle.topBar}>
-              <Text style={baseStyle.h2}>Promotions & Offers</Text>
-              <TouchableOpacity style={baseStyle.nextbtn}>
-              <Image
+            <TouchableOpacity
+            style={baseStyle.backbtn}
+            onPress={() => this.props.navigation.goBack()}
+          >
+            <Image
               style={baseStyle.backArrow}
-              source={require("../../../assets/images/search-icon.png")}
+              source={require(".././../../assets/images/back-arrow.png")}
             />
           </TouchableOpacity>
+              <Text style={baseStyle.h2}>Promotions & Offers</Text>
             </View>
             <ScrollView>
-                <View style={baseStyle.container}>
+                <View style={[baseStyle.container, styles.innerContainer]}>
           <TouchableOpacity 
           style={styles.promotionBlock}
-           onPress={() => this.props.navigation.navigate("SinglePromotions")}
+           onPress={() => this.props.navigation.navigate("SinglePromotion")}
           >
                <ImageBackground
                 source={require("../../../assets/images/promotion-thumb.png")}
@@ -56,10 +59,10 @@ export default class ViewAllPromotions extends Component {
           </TouchableOpacity> 
           <TouchableOpacity 
           style={styles.promotionBlock}
-           onPress={() => this.props.navigation.navigate("SinglePromotions")}
+           onPress={() => this.props.navigation.navigate("SinglePromotion")}
           >
                <ImageBackground
-                source={require("../../../assets/images/promotion-thumb.png")}
+                source={require("../../../assets/images/white-castle.png")}
                 style={styles.image}
                 imageStyle={{
                   borderRadius: 6,
@@ -73,9 +76,9 @@ export default class ViewAllPromotions extends Component {
               </View>
                 </ImageBackground> 
                 <View style={styles.contentBlock}>
-            <Text style={baseStyle.h2}>Polo Tropical</Text>  
+            <Text style={baseStyle.h2}>White Castle</Text>  
             <View style={baseStyle.row}>
-            <Text style={baseStyle.h3}>Salad with sprays...</Text> 
+            <Text style={baseStyle.h3}>Cappucino</Text> 
             <View style={[baseStyle.row, {justifyContent: "flex-end"}]}>
             <Text style={[baseStyle.h3, styles.oldPrice]}>$15.25</Text> 
             <Text style={[baseStyle.h3, styles.newPrice]}>$13.25</Text> 
@@ -85,7 +88,7 @@ export default class ViewAllPromotions extends Component {
           </TouchableOpacity> 
           <TouchableOpacity 
           style={styles.promotionBlock}
-           onPress={() => this.props.navigation.navigate("SinglePromotions")}
+           onPress={() => this.props.navigation.navigate("SinglePromotion")}
           >
                <ImageBackground
                 source={require("../../../assets/images/promotion-thumb.png")}
@@ -123,24 +126,8 @@ export default class ViewAllPromotions extends Component {
 const styles = StyleSheet.create({
     innerContainer: {
       flex: 1,
-      paddingHorizontal: "5%",
-      marginTop: "5%",
-    },
-    pageBox:{
-        borderRadius: 6,
-        backgroundColor: color.white,
-        alignItems: "center",
-        paddingHorizontal: 10,
-        paddingVertical: 15,
-        marginBottom: 20,
-        marginHorizontal: 8,
-        width: "28.5%"  
-    },
-    pageIcon:{
-        resizeMode: "contain",
-        width: 45,
-        height: 45,
-        marginBottom: 10
+      marginTop: "10%",
+      marginRight: 8
     },
     image: {
       resizeMode: "cover",
@@ -153,15 +140,11 @@ const styles = StyleSheet.create({
        paddingBottom: 15
     },
     promotionBlock:{
-      width: 280,
-      marginLeft: 20,
-      paddingTop: 25,
+      maxWidth: 475,
+      paddingBottom: 30
     },
     contentBlock:{
       paddingTop: 15
-    },
-    oldPrice:{
-      paddingRight: 10
     },
     discountBadge:{
       backgroundColor: color.red,
@@ -203,5 +186,4 @@ const styles = StyleSheet.create({
       paddingRight: 10,
       textDecorationLine: "line-through"
     }
-  
   });
