@@ -22,7 +22,9 @@ export const color = {
   pelorous: "#49B7C4",
   zircon: "#F5F7FF",
   linkwater: "#D8E0F3",
-  black: "#292929"
+  black: "#292929",
+  red: "#F70101",
+  palma: "#129516"
 };
 
 export default {
@@ -72,21 +74,20 @@ export default {
     textAlign: "center",
   },
   input: {
-    height: 50,
+    height: 45,
     maxWidth: 595,
     width: "100%",
     marginBottom: 12,
-    borderColor: color.linkwater,
+    borderColor: "#CFD8EB",
     borderWidth: 2,
-    padding: 10,
-    backgroundColor: color.white,
+    backgroundColor: "#FFFFFF",
     borderRadius: 50,
     fontSize: normalize(28),
-    color: color.eastbay,
-    paddingLeft: 30,
-    paddingRight: 30,
-    paddingTop: 10,
-    paddingBottom: 10,
+    color: color.black,
+    paddingLeft: 25,
+    paddingRight: 25,
+    paddingTop: 8,
+    paddingBottom: 8,
   },
   dropdown: {
     width: "100%",
@@ -95,25 +96,25 @@ export default {
     backgroundColor: "#FFFFFF",
   },
   dropdownWrapper: {
-    height: 50,
+    height: 40,
     flexDirection: "row",
     position: "relative",
-    borderColor: "#D8E0F3",
+    borderColor: "#CFD8EB",
     borderWidth: 2,
     borderRadius: 50,
     backgroundColor: "#FFFFFF",
-    paddingLeft: 20,
+    paddingLeft: 16,
     paddingRight: 8,
-    paddingTop: 10,
-    paddingBottom: 10,
-    marginBottom: 12,
+    paddingTop: 8,
+    paddingBottom: 8,
+    marginBottom: 8,
   },
   bottomDrop: {
     position: "absolute",
-    right: 17,
+    right: 13,
     width: 13,
     height: 13,
-    top: 17,
+    top: 12,
     resizeMode: "contain",
   },
   topBar: {
@@ -143,7 +144,7 @@ export default {
   welcomeContainer: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center",
+
     marginTop: "15%",
     marginBottom: "15%",
   },
@@ -164,5 +165,9 @@ export default {
     shadowOpacity: 0.38,
     shadowRadius: 5,
     elevation: 5,
+  },
+  pickerText: {
+    fontSize: normalize(28),
+    color: color.black,
   }
 };

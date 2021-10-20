@@ -6,10 +6,13 @@ import {
   StyleSheet,
   Text,
   TextInput,
+  Dimensions
 } from "react-native";
 
 import baseStyle, { color } from "../../components/Styles";
 
+const windowWidth = Dimensions.get("window").width;
+const windowHeight = Dimensions.get("window").height;
 export default class ConfirmPassword extends Component {
   render() {
     return (
@@ -27,6 +30,10 @@ export default class ConfirmPassword extends Component {
           <Text style={baseStyle.h2}>Change Password</Text>
         </View>
         <View style={[baseStyle.container, styles.innerContainer]}>
+        <Image
+              style={styles.loginVector}
+              source={require("../../assets/images/login-vector.png")}
+            />
           <View
             style={[
               baseStyle.input,
@@ -72,7 +79,7 @@ export default class ConfirmPassword extends Component {
             </TouchableOpacity>
           </View>
           <TouchableOpacity
-            style={[baseStyle.blueButton, { width: "100%", marginTop: "10%" }]}
+            style={[baseStyle.blueButton, { width: "100%", marginTop: "5%" }]}
           >
             <Text style={baseStyle.blueBtnText}>Submit</Text>
           </TouchableOpacity>
@@ -84,8 +91,8 @@ export default class ConfirmPassword extends Component {
 
 const styles = StyleSheet.create({
   innerContainer: {
-    justifyContent: "center",
     alignItems: "center",
+    marginTop: "8%"
   },
   faceButton: {
     position: "absolute",
@@ -96,5 +103,12 @@ const styles = StyleSheet.create({
     width: 20,
     height: 20,
     resizeMode: "contain",
+  },
+  loginVector: {
+    width: "100%",
+    maxWidth: 400,
+    height: windowHeight / 3,
+    resizeMode: "contain",
+    marginBottom: "8%",
   },
 });

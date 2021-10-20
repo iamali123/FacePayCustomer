@@ -26,13 +26,15 @@ export default class AddProfile extends Component {
             />
           </TouchableOpacity>
           <Text style={baseStyle.h2}>User Profile</Text>
-          <TouchableOpacity style={baseStyle.nextbtn}>
-            <Text style={baseStyle.h2}>Save</Text>
-          </TouchableOpacity>
         </View>
         <ScrollView>
           <View style={[baseStyle.container, styles.innerContainer]}>
             <ProfileForm />
+            <TouchableOpacity
+              style={[baseStyle.blueButton, { width: "100%", marginTop: 15 }]}
+            >
+              <Text style={baseStyle.blueBtnText}>Save</Text>
+            </TouchableOpacity>
           </View>
         </ScrollView>
       </>

@@ -13,6 +13,9 @@ import AddProfile from "../screens/UserProfile/AddProfile";
 import PrivacyPolicy from "../screens/PrivacyPolicy/PrivacyPolicy";
 import TermsOfUse from "../screens/TermsOfUse/TermsOfUse";
 import Index from "../screens/Home/Index/Index";
+import ConfirmPassword from '../screens/PasswordRecovery/ConfirmPassword'
+import ViewAllPromotions from "../screens/Home/PromotionAndOffers/ViewAllPromotions";
+import SinglePromotion from "../screens/Home/PromotionAndOffers/SinglePromotion";
 
 const Stack = createNativeStackNavigator();
 
@@ -104,6 +107,31 @@ export const MainStack = () => {
         }}
         name="Index"
         component={Index}
+      />
+      
+      <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="ConfirmPassword"
+        component={ConfirmPassword}
+      />
+        <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="ViewAllPromotions"
+        component={ViewAllPromotions}
+      />
+              <Stack.Screen
+        options={{
+          headerShown: false,
+          headerTransparent: true,
+        }}
+        name="SinglePromotion"
+        component={SinglePromotion}
       />
     </Stack.Navigator>
   );

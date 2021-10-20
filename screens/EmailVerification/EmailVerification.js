@@ -43,14 +43,14 @@ class EmailVerification extends React.Component {
         </View>
         <ScrollView>
           <View style={[baseStyle.container, styles.innerContainer]}>
-            <Text style={[baseStyle.text, styles.innerStyle]}>
-              We have sent a verification code to your registered email address.
+            <Text style={[baseStyle.h5, styles.innerStyle]}>
+              We have sent a verification code to your {"\n"} registered email address.
             </Text>
             <Image
               style={styles.loginVector}
               source={require("../../assets/images/account-verification.png")}
             />
-            <Text style={[baseStyle.text, {marginBottom: "5%"}]}>Enter your verification code</Text>
+            <Text style={[baseStyle.h5, {marginBottom: "5%"}]}>Enter your verification code</Text>
             <View style={baseStyle.row}>
               <TextInput
                 ref={this.ref1}
@@ -133,17 +133,13 @@ class EmailVerification extends React.Component {
                 }}
               />
             </View>
-            <View 
-             style={{ alignItems: "flex-end", width: "100%", marginTop: 15 }}
-             >
             <TouchableOpacity
-                style={baseStyle.blueButton}
+                style={[baseStyle.blueButton, {width: "100%", marginTop: 15 }]}
                 onPress={() =>   this.props.navigation.navigate("AddProfile")}
               >
                 <Text style={baseStyle.blueBtnText}>Verify</Text>
               </TouchableOpacity>
             </View>
-          </View>
         </ScrollView>
       </>
     );
@@ -154,7 +150,7 @@ export default EmailVerification;
 
 const styles = StyleSheet.create({
   innerContainer: {
-    marginTop: "15%",
+    marginTop: "8%",
     alignItems: "center",
   },
   loginVector: {

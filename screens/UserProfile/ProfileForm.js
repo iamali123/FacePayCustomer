@@ -13,18 +13,17 @@ class ProfileForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedLanguage: "",
       firstName: "",
       lastName: "",
-      dob: "",
-      city: "",
-      State: "",
-      zipCode: "",
+      DOB: "",
       gender: "",
       email: "",
       phoneNo: "",
       address: "",
-      country: "",
+      city: "",
+      State: "",
+      zipcode: "",
+      region: "",
     };
   }
   render() {
@@ -34,25 +33,26 @@ class ProfileForm extends React.Component {
           style={baseStyle.input}
           value={this.state.firstName}
           placeholder="First Name"
-          placeholderTextColor={color.eastbay}
+          placeholderTextColor= {color.black}
           onChangeText={(value) => this.setState({ firstName: value })}
         />
         <TextInput
           style={baseStyle.input}
           value={this.state.lastName}
           placeholder="Last Name"
-          placeholderTextColor={color.eastbay}
+          placeholderTextColor= {color.black}
           onChangeText={(value) => this.setState({ lastName: value })}
         />
         <TextInput
           style={baseStyle.input}
-          value={this.state.dob}
+          value={this.state.DOB}
           placeholder="Date of Birth"
-          placeholderTextColor={color.eastbay}
-          onChangeText={(value) => this.setState({ dob: value })}
+          placeholderTextColor= {color.black}
+          onChangeText={(value) => this.setState({ DOB: value })}
         />
-                <View style={baseStyle.dropdownWrapper}>
+        <View style={baseStyle.dropdownWrapper}>
           <Picker
+            mode="dropdown"
             style={baseStyle.dropdown}
             selectedValue={this.state.gender}
             onValueChange={(itemValue, itemIndex) =>
@@ -60,10 +60,16 @@ class ProfileForm extends React.Component {
             }
           >
             <Picker.Item
+              style={baseStyle.pickerText}
+              style={baseStyle.pickerText}
               label="Male"
               value="Male"
             />
-            <Picker.Item label="Female" value="Female" />
+            <Picker.Item
+              style={baseStyle.pickerText}
+              label="Female"
+              value="Female"
+            />
           </Picker>
           <Image
             style={baseStyle.bottomDrop}
@@ -75,24 +81,24 @@ class ProfileForm extends React.Component {
           style={baseStyle.input}
           value={this.state.email}
           placeholder="Email"
-          placeholderTextColor={color.eastbay}
+          placeholderTextColor= {color.black}
           onChangeText={(value) => this.setState({ email: value })}
         />
         <TextInput
           style={baseStyle.input}
           value={this.state.phoneNo}
-          placeholder="Phone Number"
-          placeholderTextColor={color.eastbay}
+          placeholder="Phone"
+          placeholderTextColor= {color.black}
           onChangeText={(value) => this.setState({ phoneNo: value })}
         />
         <TextInput
           style={baseStyle.input}
           value={this.state.address}
           placeholder="Address"
-          placeholderTextColor={color.eastbay}
+          placeholderTextColor= {color.black}
           onChangeText={(value) => this.setState({ address: value })}
         />
-                <View
+        <View
           style={{
             flexDirection: "row",
             justifyContent: "space-between",
@@ -107,8 +113,16 @@ class ProfileForm extends React.Component {
                 this.setState({ city: itemValue })
               }
             >
-              <Picker.Item label="City" value="City" />
-              <Picker.Item label="London" value="London" />
+              <Picker.Item
+                style={baseStyle.pickerText}
+                label="City"
+                value="City"
+              />
+              <Picker.Item
+                style={baseStyle.pickerText}
+                label="London"
+                value="London"
+              />
             </Picker>
             <Image
               style={baseStyle.bottomDrop}
@@ -123,8 +137,16 @@ class ProfileForm extends React.Component {
                 this.setState({ State: itemValue })
               }
             >
-              <Picker.Item label="State" value="State" />
-              <Picker.Item label="London" value="London" />
+              <Picker.Item
+                style={baseStyle.pickerText}
+                label="State"
+                value="State"
+              />
+              <Picker.Item
+                style={baseStyle.pickerText}
+                label="London"
+                value="London"
+              />
             </Picker>
             <Image
               style={baseStyle.bottomDrop}
@@ -134,24 +156,30 @@ class ProfileForm extends React.Component {
         </View>
         <TextInput
           style={baseStyle.input}
-          value={this.state.zipCode}
+          value={this.state.zipcode}
           placeholder="Zip Code"
-          placeholderTextColor={color.eastbay}
-          onChangeText={(value) => this.setState({ zipCode: value })}
+          placeholderTextColor= {color.black}
+          onChangeText={(value) => this.setState({ zipcode: value })}
         />
         <View style={baseStyle.dropdownWrapper}>
           <Picker
+            mode="dropdown"
             style={baseStyle.dropdown}
-            selectedValue={this.state.country}
+            selectedValue={this.state.region}
             onValueChange={(itemValue, itemIndex) =>
-              this.setState({ country: itemValue })
+              this.setState({ region: itemValue })
             }
           >
             <Picker.Item
-              label="United State of America"
-              value="United State of America"
+              style={baseStyle.pickerText}
+              label="United States Of America"
+              value="United States Of America"
             />
-            <Picker.Item label="London" value="London" />
+            <Picker.Item
+              style={baseStyle.pickerText}
+              label="London"
+              value="London"
+            />
           </Picker>
           <Image
             style={baseStyle.bottomDrop}
@@ -164,10 +192,9 @@ class ProfileForm extends React.Component {
 }
 
 export default ProfileForm;
-
 const styles = StyleSheet.create({
   dualField: {
-    width: "47%",
+    width: "46%",
   },
   mt: {
     marginTop: 15,

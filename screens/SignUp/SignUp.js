@@ -29,16 +29,14 @@ export default class SignUp extends Component {
   _renderSinUpButton() {
     if (this.state.termsSelected) {
       return (
-        <View style={{ alignItems: "flex-end", width: "100%", marginTop: 15 }}>
           <TouchableOpacity
-            style={baseStyle.blueButton}
+            style={[baseStyle.blueButton, {width: "100%", marginTop: 15}]}
             onPress={() => {
               this.props.navigation.navigate("EmailVerification");
             }}
           >
             <Text style={baseStyle.blueBtnText}>Sign Up</Text>
           </TouchableOpacity>
-        </View>
       );
     } else {
       return null;

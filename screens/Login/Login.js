@@ -11,18 +11,6 @@ export default class Login extends Component {
     render() {
         return (
           <>
-            <View style={baseStyle.topBar}>
-            <TouchableOpacity
-              style={baseStyle.backbtn}
-              onPress={() => this.props.navigation.goBack()}
-            >
-              <Image
-                style={baseStyle.backArrow}
-                source={require("../../assets/images/back-arrow.png")}
-              />
-            </TouchableOpacity>
-          </View>
-          <ScrollView>
           <View style={[baseStyle.container, styles.innerContainer]}>
             <Image
               style={styles.loginVector}
@@ -44,29 +32,27 @@ export default class Login extends Component {
 
             <View style={styles.bottomContent}>
                  <View style={{ flexDirection: "row", marginBottom: 10 }}>
-                <Text style={baseStyle.text}>
+                <Text style={baseStyle.h5}>
                 Don’t you have an account? 
                 </Text>
                 <TouchableOpacity
                   onPress={() => this.props.navigation.navigate("SignUp")}
                 >
-                  <Text style={baseStyle.text}>
-                    Sign Up
+                  <Text style={baseStyle.h5}> Sign Up
                   </Text>
                 </TouchableOpacity>
               </View>
               <TouchableOpacity
                 onPress={() =>
-                  this.props.navigation.navigate("PasswordRecovery")
+                  this.props.navigation.navigate("ChangePassword")
                 }
               >
-                <Text style={baseStyle.text}>
+                <Text style={baseStyle.h5}>
                   Forgot Password?
                 </Text>
               </TouchableOpacity>
               </View>
           </View>
-        </ScrollView>
           </>
         )
     }

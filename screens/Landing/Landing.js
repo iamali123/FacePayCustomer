@@ -31,15 +31,15 @@ class Landing extends React.Component {
           </Animatable.View>
           <View style={styles.content}>
             <Animatable.View animation="slideInLeft">
-              <Text style={baseStyle.h1}>Customer</Text>
+              <Text style={[baseStyle.h1, {textAlign: "center"}]}>Customer</Text>
             </Animatable.View>
             <Text style={[baseStyle.text, styles.welcomeDesc]}>
               The best part of ordering stuff online, the packages. It's like
               recieving a present every time on order shows up at your door.
             </Text>
-            <Animatable.View animation="slideInLeft">
+            <Animatable.View animation="slideInLeft" style={{width: "100%"}}>
               <TouchableOpacity
-              style={baseStyle.blueButton}
+              style={[baseStyle.blueButton, {width: "100%"}]}
                 onPress={() => this.props.navigation.navigate("Login")}
               >
                 <Text style={baseStyle.blueBtnText}>Getting Started</Text>
@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
     width: windowWidth / 3,
     height: windowHeight / 6,
     marginBottom: "5%",
+alignSelf: "center"
   },
   customerVector: {
     resizeMode: "contain",
@@ -69,7 +70,6 @@ const styles = StyleSheet.create({
     marginLeft: "8%",
   },
   content: {
-    alignItems: "center",
     paddingLeft: "5%",
     paddingRight: "5%",
   },

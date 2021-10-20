@@ -35,7 +35,7 @@ class SignUpForm extends React.Component {
           style={baseStyle.input}
           value={this.state.email}
           placeholder="Email"
-          placeholderTextColor= {color.eastbay}
+          placeholderTextColor= {color.black}
           keyboardType="email-address"
           onChangeText={(value) => this.setState({ email: value })}
         />
@@ -53,7 +53,7 @@ class SignUpForm extends React.Component {
             secureTextEntry={this.state.ShowPassword}
             value={this.state.password}
             placeholder="Password"
-            placeholderTextColor= {color.eastbay}
+            placeholderTextColor= {color.black}
             keyboardType="default"
             onChangeText={(value) => this.setState({ password: value })}
           />
@@ -87,7 +87,7 @@ class SignUpForm extends React.Component {
             secureTextEntry={this.state.ShowConfirmPassword}
             value={this.state.confirmPassword}
             placeholder="Confirm Password"
-            placeholderTextColor= {color.eastbay}
+            placeholderTextColor= {color.black}
             keyboardType="default"
             onChangeText={(value) => this.setState({ confirmPassword: value })}
           />

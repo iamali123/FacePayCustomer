@@ -48,7 +48,7 @@ export default class LoginForm extends Component {
           style={baseStyle.input}
           value={this.state.email}
           placeholder="Email"
-          placeholderTextColor= {color.eastbay}
+          placeholderTextColor= {color.black}
           keyboardType="default"
           onChangeText={(value) => this.setState({ email: value })}
         />
@@ -66,7 +66,7 @@ export default class LoginForm extends Component {
             secureTextEntry={this.state.ShowPassword}
             value={this.state.password}
             placeholder="Password"
-            placeholderTextColor= {color.eastbay}
+            placeholderTextColor= {color.black}
             keyboardType="default"
             onChangeText={(value) =>
               this.setState({ password: value, visible: true })
