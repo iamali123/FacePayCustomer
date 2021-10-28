@@ -14,7 +14,7 @@ import baseStyle, { color } from "../../components/Styles";
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-class Stores extends React.Component {
+class HorizontalCardsStores extends React.Component {
   constructor(props) {
     super(props);
     this.state = {    
@@ -41,7 +41,7 @@ class Stores extends React.Component {
           </TouchableOpacity>
           <Text style={baseStyle.h2}>Your Stores</Text>
           <TouchableOpacity
-            onPress={() => this.props.navigation.navigate("SearchStore")}
+                      onPress={() => this.props.navigation.navigate("SearchStore")}
             style={baseStyle.nextbtn}
           >
             <Image
@@ -130,22 +130,20 @@ class Stores extends React.Component {
           </View>
           <ScrollView>
             <View style={styles.storesWrapper}>
-            <TouchableOpacity 
-            style={styles.storeBlock}
-            onPress={() =>
-              this.props.navigation.navigate("StoreDetail")
-            }>
+            <TouchableOpacity style={styles.storeBlock}>
               <View style={styles.storeLogoWrap}>
               <Image
               style={styles.storeLogo}
-              source={require("../../assets/images/five-guys.png")}
+              source={require("../../assets/images/pollotropical-logo.png")}
             />
-              <Image
+            </View>
+            <View style={styles.contentCol}>
+            <Text style={[baseStyle.h3, styles.storeName ]}>Five Guys</Text>
+            <Image
               style={styles.storeTick}
               source={require("../../assets/images/storeTick.png")}
             />
-              </View>
-                <Text style={[baseStyle.h3, styles.storeName ]}>Five Guys</Text>
+            </View>
             </TouchableOpacity>
             <TouchableOpacity style={styles.storeBlock}>
               <View style={styles.storeLogoWrap}>
@@ -153,25 +151,14 @@ class Stores extends React.Component {
               style={styles.storeLogo}
               source={require("../../assets/images/pollotropical-logo.png")}
             />
-              <Image
+            </View>
+            <View style={styles.contentCol}>
+            <Text style={[baseStyle.h3, styles.storeName ]}>Five Guys</Text>
+            <Image
               style={styles.storeTick}
               source={require("../../assets/images/storeTick.png")}
             />
-              </View>
-                <Text style={[baseStyle.h3, styles.storeName ]}>Five Guys</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.storeBlock}>
-              <View style={styles.storeLogoWrap}>
-              <Image
-              style={styles.storeLogo}
-              source={require("../../assets/images/five-guys.png")}
-            />
-              <Image
-              style={styles.storeTick}
-              source={require("../../assets/images/storeTick.png")}
-            />
-              </View>
-                <Text style={[baseStyle.h3, styles.storeName ]}>Five Guys</Text>
+            </View>
             </TouchableOpacity>
             <TouchableOpacity style={styles.storeBlock}>
               <View style={styles.storeLogoWrap}>
@@ -179,12 +166,14 @@ class Stores extends React.Component {
               style={styles.storeLogo}
               source={require("../../assets/images/White_Castle_logo.png")}
             />
-              <Image
+            </View>
+            <View style={styles.contentCol}>
+            <Text style={[baseStyle.h3, styles.storeName ]}>Five Guys</Text>
+            <Image
               style={styles.storeTick}
               source={require("../../assets/images/storeTick.png")}
             />
-              </View>
-                <Text style={[baseStyle.h3, styles.storeName ]}>Five Guys</Text>
+            </View>
             </TouchableOpacity>
             <TouchableOpacity style={styles.storeBlock}>
               <View style={styles.storeLogoWrap}>
@@ -192,12 +181,14 @@ class Stores extends React.Component {
               style={styles.storeLogo}
               source={require("../../assets/images/pollotropical-logo.png")}
             />
-              <Image
+            </View>
+            <View style={styles.contentCol}>
+            <Text style={[baseStyle.h3, styles.storeName ]}>Five Guys</Text>
+            <Image
               style={styles.storeTick}
               source={require("../../assets/images/storeTick.png")}
             />
-              </View>
-                <Text style={[baseStyle.h3, styles.storeName ]}>Five Guys</Text>
+            </View>
             </TouchableOpacity>
             <TouchableOpacity style={styles.storeBlock}>
               <View style={styles.storeLogoWrap}>
@@ -205,38 +196,14 @@ class Stores extends React.Component {
               style={styles.storeLogo}
               source={require("../../assets/images/pollotropical-logo.png")}
             />
-              <Image
+            </View>
+            <View style={styles.contentCol}>
+            <Text style={[baseStyle.h3, styles.storeName ]}>Five Guys</Text>
+            <Image
               style={styles.storeTick}
               source={require("../../assets/images/storeTick.png")}
             />
-              </View>
-                <Text style={[baseStyle.h3, styles.storeName ]}>Five Guys</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.storeBlock}>
-              <View style={styles.storeLogoWrap}>
-              <Image
-              style={styles.storeLogo}
-              source={require("../../assets/images/White_Castle_logo.png")}
-            />
-              <Image
-              style={styles.storeTick}
-              source={require("../../assets/images/storeTick.png")}
-            />
-              </View>
-                <Text style={[baseStyle.h3, styles.storeName ]}>Five Guys</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.storeBlock}>
-              <View style={styles.storeLogoWrap}>
-              <Image
-              style={styles.storeLogo}
-              source={require("../../assets/images/White_Castle_logo.png")}
-            />
-              <Image
-              style={styles.storeTick}
-              source={require("../../assets/images/storeTick.png")}
-            />
-              </View>
-                <Text style={[baseStyle.h3, styles.storeName ]}>Five Guys</Text>
+            </View>
             </TouchableOpacity>
             </View>
           </ScrollView>
@@ -245,7 +212,7 @@ class Stores extends React.Component {
   }
 }
 
-export default Stores;
+export default HorizontalCardsStores;
 
 const styles = StyleSheet.create({
   innerStyle: {
@@ -283,19 +250,35 @@ const styles = StyleSheet.create({
    alignItems: "center"
   },
   storesWrapper:{
-    flexDirection: "row",
-    // justifyContent: "space-between",
-    flexWrap: "wrap",
     paddingTop: "5%",
     paddingBottom: "15%",
-    paddingLeft: 12,
-    paddingRight: 7
+    paddingLeft: 20,
+    paddingRight: 20
+  },
+  storeTick:{
+    width: 25,
+    height: 25,
+    marginLeft: 15
   },
   storeBlock:{
-    width: "33.333%",
-    paddingLeft: 8,
-    paddingRight: 8,
-    marginBottom: 25
+      flexDirection: "row",
+      paddingBottom: 15,
+      borderColor: "#D3D8EF",
+      borderBottomWidth: 2,
+      marginBottom: 15
+  },
+  contentCol:{
+    width: '70%',
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      paddingLeft: 15
+  },
+
+storeLogo:{
+    resizeMode: "contain",
+    width: 150,
+    height: 60
   },
   storeLogoWrap:{
     backgroundColor: color.white,
@@ -305,21 +288,7 @@ const styles = StyleSheet.create({
     borderColor: "#D8E0F3",
     borderWidth: 1,
     borderRadius: 10,
+    width: "30%"
   },
-  storeLogo:{
-    resizeMode: "contain",
-    width: "100%",
-    height: 90
-  },
-  storeName:{
-    paddingTop: 10,
-    paddingRight: 10
-  },
-  storeTick:{
-    position: "absolute",
-    top: -10,
-    right: -10,
-    width: 25,
-    height: 25
-  }
+
 });

@@ -32,6 +32,7 @@ export default class AddProfile extends Component {
             <ProfileForm />
             <TouchableOpacity
               style={[baseStyle.blueButton, { width: "100%", marginTop: 15 }]}
+              onPress={() => this.props.navigation.navigate("ScanFace")}
             >
               <Text style={baseStyle.blueBtnText}>Save</Text>
             </TouchableOpacity>

@@ -36,7 +36,8 @@ export default class Index extends Component {
           <Text style={baseStyle.h3}>View All</Text>  
           </TouchableOpacity>  
         </View>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false}> 
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <View style={{paddingRight: 30, flexDirection: "row"}}> 
           <TouchableOpacity 
           style={styles.promotionBlock}
            onPress={() => this.props.navigation.navigate("SinglePromotion")}
@@ -124,8 +125,9 @@ export default class Index extends Component {
               </View>
             </View>
           </TouchableOpacity> 
+          </View>
         </ScrollView>
-         <View style={{width: "100%", flexDirection: "row", flexWrap: "wrap", marginTop: "8%", paddingHorizontal: 12}}>
+         <View style={{width: "100%", flexDirection: "row", flexWrap: "wrap", marginTop: "8%", marginBottom: "15%", paddingHorizontal: 12}}>
            <TouchableOpacity 
                   onPress={() => {
                     this.props.navigation.navigate("GoTouchless");
